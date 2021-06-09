@@ -12,15 +12,15 @@ namespace ExamTest
     {
         frmHome home = new frmHome();
         private const int studentlimit = 99;
-        private Student[] students = new Student[studentlimit]; // default cos fuck it
+        private Student[] students = new Student[studentlimit]; // stores 99 individual Student objects inside students
 
         public frmClassesAndMethods()
         {
             InitializeComponent();
-            students[0] = new Student("James");
-            students[1] = new Student("Anthony");
-            students[2] = new Student("Noah");
-            BuildList();
+            students[0] = new Student("James");                 // stores James as student 0
+            students[1] = new Student("Anthony");               // stores Anthony as student 1
+            students[2] = new Student("Noah");                  // stores Noah as Student 2
+            BuildList();                                        // refreshes the left textbox
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -29,21 +29,21 @@ namespace ExamTest
             {
                 if (students[i] == null)
                 {
-                    students[i] = new Student(txbxStudentName.Text);
-                    break;
+                    students[i] = new Student(txbxStudentName.Text);    // stores the name in textbox to studentname
+                    break;  // breaks the for loop
                 }
             }
-            BuildList();
+            BuildList();    // refreshes the left textbox
             lblFeedback.Text = "Student added Successfully!";
         }
 
         private void BuildList()
         {
-            txbxStudentList.Text = "";
+            txbxStudentList.Text = "";  // resets the left textbox
             string name = "";
             for (int i = 0; i < studentlimit; i++)
             {
-                if (students[i] != null)
+                if (students[i] != null)    // if student object doesnt exist
                 {
                     name = students[i].GetStudentName();
                     txbxStudentList.AppendText(name);
