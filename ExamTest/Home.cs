@@ -10,7 +10,9 @@ namespace ExamTest
 {
     public partial class frmHome : Form
     {
+        frmIO io = new frmIO();
         frmList lt = new frmList();
+
         public frmHome()
         {
             InitializeComponent();
@@ -19,6 +21,12 @@ namespace ExamTest
         private void button1_Click(object sender, EventArgs e)
         {
             lt.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            io.Show();
             this.Hide();
         }
     }

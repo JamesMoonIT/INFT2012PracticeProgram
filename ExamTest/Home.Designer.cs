@@ -31,6 +31,8 @@ namespace ExamTest
         {
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.lb = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -44,7 +46,7 @@ namespace ExamTest
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(103, 19);
+            this.button1.Location = new System.Drawing.Point(204, 19);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -52,11 +54,32 @@ namespace ExamTest
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // lb
+            // 
+            this.lb.AutoSize = true;
+            this.lb.Location = new System.Drawing.Point(23, 55);
+            this.lb.Name = "lb";
+            this.lb.Size = new System.Drawing.Size(143, 15);
+            this.lb.TabIndex = 2;
+            this.lb.Text = "Week 8: Input and Output";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(204, 51);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Go to I/O";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(207, 277);
+            this.ClientSize = new System.Drawing.Size(307, 277);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.lb);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Name = "frmHome";
@@ -70,5 +93,7 @@ namespace ExamTest
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lb;
+        private System.Windows.Forms.Button button2;
     }
 }
