@@ -29,5 +29,12 @@ namespace ExamTest
             IOForm.Show();
             this.Hide();
         }
+
+        private void btnClasses_Click(object sender, EventArgs e)
+        {
+            frmClassesAndMethods FormCAM = new frmClassesAndMethods();
+            FormCAM.Show();
+            this.Hide();
+        }
     }
 }
