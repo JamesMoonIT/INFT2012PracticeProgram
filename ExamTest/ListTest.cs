@@ -50,5 +50,17 @@ namespace ExamTest
             myList.Remove(txbxNewValue.Text);
             BuildList();
         }
+
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            myList.Sort();
+            BuildList();
+        }
+
+        private void btnReverse_Click(object sender, EventArgs e)
+        {
+            myList.Reverse();
+            BuildList();
+        }
     }
 }

@@ -36,6 +36,7 @@ namespace ExamTest
             this.lblListSize = new System.Windows.Forms.Label();
             this.btnSort = new System.Windows.Forms.Button();
             this.btnReverse = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txbxList
@@ -90,6 +91,7 @@ namespace ExamTest
             this.btnSort.TabIndex = 5;
             this.btnSort.Text = "Sort";
             this.btnSort.UseVisualStyleBackColor = true;
+            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
             // 
             // btnReverse
             // 
@@ -99,12 +101,23 @@ namespace ExamTest
             this.btnReverse.TabIndex = 6;
             this.btnReverse.Text = "Reverse";
             this.btnReverse.UseVisualStyleBackColor = true;
+            this.btnReverse.Click += new System.EventHandler(this.btnReverse_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(228, 220);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 7;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
             // 
             // frmList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(381, 278);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnReverse);
             this.Controls.Add(this.btnSort);
             this.Controls.Add(this.lblListSize);
@@ -128,6 +141,7 @@ namespace ExamTest
         private System.Windows.Forms.Label lblListSize;
         private System.Windows.Forms.Button btnSort;
         private System.Windows.Forms.Button btnReverse;
+        private System.Windows.Forms.Button btnExit;
     }
 }
 
