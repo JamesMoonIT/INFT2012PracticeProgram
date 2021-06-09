@@ -10,6 +10,7 @@ namespace ExamTest
 {
     public partial class frmClassesAndMethods : Form
     {
+        frmHome home = new frmHome();
         private const int studentlimit = 99;
         private Student[] students = new Student[studentlimit]; // default cos fuck it
 
@@ -33,6 +34,7 @@ namespace ExamTest
                 }
             }
             BuildList();
+            lblFeedback.Text = "Student added Successfully!";
         }
 
         private void BuildList()
@@ -48,6 +50,26 @@ namespace ExamTest
                     txbxStudentList.AppendText(Environment.NewLine);
                 }
             }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            home.Show();
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < studentlimit; i++)
+            {
+                if (students[i].GetStudentName() == txbxStudentName.Text)
+                {
+                    students[i] = null;
+                    break;
+                }
+            }
+            BuildList();
+            lblFeedback.Text = "Student removed Successfully!";
         }
     }
 }
