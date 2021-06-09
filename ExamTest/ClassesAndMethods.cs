@@ -10,39 +10,44 @@ namespace ExamTest
 {
     public partial class frmClassesAndMethods : Form
     {
-        private Student[] students = new Student[3];
-        private int numberOfStudents = 0;
+        private const int studentlimit = 99;
+        private Student[] students = new Student[studentlimit]; // default cos fuck it
 
         public frmClassesAndMethods()
         {
             InitializeComponent();
-            students[0] = AddStudent("James");
-            AddStudent("Anthony");
-            AddStudent("Noah");
-            for (int i = 0; i < numberOfStudents; i++)
-            {
-                txbxStudentList.Text += students[i].GetStudentName();
-            }
-        }
-
-        private void AddStudent(string name)
-        {
-            int coedeunt = 0;
-            while (students[count] != null)
-            {
-                students[count] = new Student(name);
-                count++;
-            }
-        }
-
-        private void RemoveStudent(string name)
-        {
-            numberOfStudents--;
+            students[0] = new Student("James");
+            students[1] = new Student("Anthony");
+            students[2] = new Student("Noah");
+            BuildList();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AddStudent(txbxStudentName.Text);
+            for (int i = 0; i < studentlimit; i++)
+            {
+                if (students[i] == null)
+                {
+                    students[i] = new Student(txbxStudentName.Text);
+                    break;
+                }
+            }
+            BuildList();
+        }
+
+        private void BuildList()
+        {
+            txbxStudentList.Text = "";
+            string name = "";
+            for (int i = 0; i < studentlimit; i++)
+            {
+                if (students[i] != null)
+                {
+                    name = students[i].GetStudentName();
+                    txbxStudentList.AppendText(name);
+                    txbxStudentList.AppendText(Environment.NewLine);
+                }
+            }
         }
     }
 }
