@@ -13,6 +13,7 @@ namespace ExamTest
     public partial class frmList : Form
     {
         List<string> myList = new List<string>();
+        frmHome home = new frmHome();
 
         public frmList()
         {
@@ -61,6 +62,12 @@ namespace ExamTest
         {
             myList.Reverse();
             BuildList();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            home.Show();
         }
     }
 }

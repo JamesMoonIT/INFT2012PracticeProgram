@@ -10,16 +10,16 @@ namespace ExamTest
 {
     public partial class frmHome : Form
     {
+        frmList lt = new frmList();
         public frmHome()
         {
-            
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmList lt = new frmList();
             lt.Show();
+            this.Hide();
         }
     }
 }
