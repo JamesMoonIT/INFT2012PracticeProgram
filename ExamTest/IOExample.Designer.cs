@@ -34,6 +34,8 @@ namespace ExamTest
             this.btnExport = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnCypher = new System.Windows.Forms.Button();
+            this.lblFeedback = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnImport
@@ -70,6 +72,7 @@ namespace ExamTest
             this.textBox2.Location = new System.Drawing.Point(12, 12);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(188, 143);
             this.textBox2.TabIndex = 3;
             // 
@@ -83,11 +86,32 @@ namespace ExamTest
             this.btnCypher.UseVisualStyleBackColor = true;
             this.btnCypher.Click += new System.EventHandler(this.btnCypher_Click);
             // 
+            // lblFeedback
+            // 
+            this.lblFeedback.AutoSize = true;
+            this.lblFeedback.Location = new System.Drawing.Point(161, 199);
+            this.lblFeedback.Name = "lblFeedback";
+            this.lblFeedback.Size = new System.Drawing.Size(201, 15);
+            this.lblFeedback.TabIndex = 5;
+            this.lblFeedback.Text = "Import a text file and I can encrypt it.";
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(220, 217);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 6;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // frmIO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(519, 244);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.lblFeedback);
             this.Controls.Add(this.btnCypher);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.btnExport);
@@ -107,5 +131,7 @@ namespace ExamTest
         private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnCypher;
+        private System.Windows.Forms.Label lblFeedback;
+        private System.Windows.Forms.Button btnExit;
     }
 }
