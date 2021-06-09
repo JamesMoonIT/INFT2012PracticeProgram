@@ -18,7 +18,7 @@ namespace ExamTest
 
         private void btnImport_Click(object sender, EventArgs e)
         {
-            string content = File.ReadAllText("import.txt");
+            string content = File.ReadAllText("../../../import.txt");
             textBox2.Text = content;
         }
 
