@@ -62,13 +62,13 @@ namespace ExamTest
         {
             for (int i = 0; i < studentlimit; i++)
             {
-                if (students[i].GetStudentName() == txbxStudentName.Text)
+                if (students[i].GetStudentName() == txbxStudentName.Text)   // if student name matches the name in the textbox
                 {
-                    students[i] = null;
-                    break;
+                    students[i] = null;     // removes Student from students (DOES NOT DELETE, ONLY REMOVES REFERENCE)
+                    break;      // breaks for loop
                 }
             }
-            BuildList();
+            BuildList();    // refresh left textbox
             lblFeedback.Text = "Student removed Successfully!";
         }
     }
