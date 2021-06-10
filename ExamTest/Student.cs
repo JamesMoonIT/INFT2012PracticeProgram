@@ -6,6 +6,7 @@ namespace ExamTest
 {
     class Student
     {
+
         private string studentName;
 
         public Student(string name)

@@ -36,5 +36,12 @@ namespace ExamTest
             FormCAM.Show();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmArrays arrays = new frmArrays();
+            arrays.Show();
+            this.Hide();
+        }
     }
 }
